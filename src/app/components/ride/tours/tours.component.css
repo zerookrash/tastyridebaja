@@ -1,0 +1,56 @@
+/* Tarjetas de Tours */
+
+.card img,
+.card button {
+    margin: 5%;
+}
+
+.card img {
+    border-radius: 30px;
+    width: 90%;
+}
+
+.card {
+    margin: 1rem;
+}
+
+.card .text1,
+.card .text {
+    text-align: justify;
+    width: 100%;
+}
+
+.card h3,
+.card h2 {
+    color: #e63023;
+}
+
+.card p {
+    color: #652015;
+    text-align: justify;
+}
+
+.btn-personal {
+    color: white;
+    background-color: #e63023;
+}
+
+.btn-personal:hover {
+    color:white;
+    background-color: #652015;
+}
+
+
+
+/* Spinner */
+
+.tours {
+    text-align: center;
+}
+
+
+.spinner {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: inline-block;
+}

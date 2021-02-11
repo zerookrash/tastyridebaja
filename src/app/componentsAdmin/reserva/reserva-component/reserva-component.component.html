@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">#</th>
+            <th scope="col">Number of people</th>
+            <th scope="col">Cardholder name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Where will you be staying?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="text-center" *ngFor="let reservation of reservations; index as i">
+            <td scope="row"> <strong>{{i + 1}}</strong> </td>
+            <td> <strong>{{reservation.peopel}}</strong> </td>
+            <td>{{reservation.cardholder}}</td>
+            <td>{{reservation.email}}</td>
+            <td>{{reservation.phone}}</td>
+            <td>{{reservation.staying}}</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-block" (click)='onDeleteReservation(reservation.id)'>Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+<section id='tour'>
+    <div class="container tours">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <div *ngIf="tour == null ">
+                    <div class="spinner-border spinner" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>          
+                </div>
+                <div class="card_tour" *ngIf="tour != null ">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <p>
+                                <img src="{{tour.img}}" alt=" {{tour.title}} " class="img-fluid">
+                            </p>
+                            <div class="card-title title"> {{tour.title}} </div>
+                            <hr>
+                            <div class="card-text">
+                                <p>
+                                    {{tour.descriptionP1}}
+                                </p>
+                                <p>
+                                    {{tour.descriptionP2}}
+                                </p>
+                                <p>
+                                    {{tour.descriptionP3}}
+                                </p>
+                                <p>
+                                    {{tour.descriptionP4}}
+                                </p>
+                                <p class="price ml-auto">
+                                    $<strong>{{tour.price}} </strong> <small>USD</small> 
+                                </p>
+                            </div>
+                            <div class="card-text">
+                                <a routerLink="/theride" class="btn btn-personal mr-2">Return Tours</a>
+                                <a routerLink="/reservas" class="btn btn-info">Reserve</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

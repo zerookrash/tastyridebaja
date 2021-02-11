@@ -1,0 +1,39 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+
+         <!-- Form -->
+         <form [formGroup]="form" novalidate (ngSubmit)="save($event)" class="login100-form ">
+          <p class="wrap-input100"> 
+            <label for="email">Email:</label> <br/>
+            <input class="input100" type="email" formControlName="email">
+          </p>
+          <div *ngIf="emailField.errors && emailField.touched" class="validate-input alert-validate">
+            <p *ngIf="emailField.hasError('required')" class="alert-validate">
+              Es un campo requerido <i class="fas fa-radiation-alt"></i>
+            </p>
+            <p *ngIf="form.get('email').hasError('email')" class="alert-validate">
+              No es un email valido <i class="fas fa-radiation-alt"></i>
+            </p>
+          </div>
+          
+          <p class="wrap-input100">
+            <label for="pass">Password:</label>  <br />
+            <input class="input100" type="password" name="pass" formControlName="pass" >
+          </p>
+          <div *ngIf="passField.errors && passField.touched" class="alert-validate">
+            <p *ngIf="passField.hasError('required')">
+              Es un campo requerido <i class="fas fa-radiation-alt"></i>
+            </p>
+          </div>
+
+
+          <div class="container-login100-form-btn mt-3">
+            <button type="submit"  class="login100-form-btn">Log In</button> 
+          </div>
+        </form>
+         <!-- /Form -->
+
+        </div>
+    </div>
+</div>

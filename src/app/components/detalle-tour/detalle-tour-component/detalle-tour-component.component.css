@@ -1,0 +1,43 @@
+.card {
+    margin-top: 2rem;
+    border-radius: 20px;
+}
+
+.card p {
+    text-align: justify;
+}
+
+.card .price {
+    float: right;
+    font-size: 2.5rem;
+    color: green;
+}
+
+.title {
+    font-size: 2rem;
+    color: #e63023;
+}
+
+hr {
+    height: 1px;
+    width: 50%;
+    background-color: black;
+  }
+
+.btn-personal {
+    background-color: #e63023;
+    color: white;
+}
+
+/* Spinner */
+
+.tours {
+    text-align: center;
+}
+
+
+.spinner {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: inline-block;
+}

@@ -1,0 +1,19 @@
+.jumbotron {
+    background-image: url('../../../../assets/img/theRide/rocio ajonjoli mole.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.jumbotron h2 {
+    text-align: center;
+    margin: 5%;
+}
+
+@media only screen and (max-width: 360px) {
+    .jumbotron  {
+        margin-top: 30%;
+    }
+}
+

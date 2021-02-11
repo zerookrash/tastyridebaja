@@ -1,0 +1,154 @@
+<form [formGroup]="formAlta" novalidate (ngSubmit)="saveAlta(formAlta)">
+
+    <div class="row">
+        <div class="col-12 col-md-6 img-principla">
+            <img src="../../../../assets/img/logo.png">
+        </div>
+        <div class="col-12 col-md-6 mt-auto w-100">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" formControlName="img" (change)="handeleImage($event)" >
+                  <label class="custom-file-label" for="inputGroupFile01"> <i class="fas fa-cloud-upload-alt"></i> </label>
+                </div>
+            </div>
+            <div class="alert alert-danger" *ngIf="imgField.errors && imgField.touched">
+                <p class="m-4" *ngIf="imgField.hasError('required')">
+                Es un campo requerido
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                </div>
+                <input type="text" class="form-control" formControlName="title">
+              </div>
+              <div class="alert alert-danger" *ngIf="titleField.errors && titleField.touched">
+                <p class="m-4" *ngIf="titleField.hasError('required')">
+                  Es un campo requerido
+                </p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+                </div>
+                <input type="text" class="form-control" formControlName="price">
+              </div>
+              <div class="alert alert-danger" *ngIf="priceField.errors && priceField.touched">
+                  <p class="m-4" *ngIf="priceField.hasError('required')">
+                    Es un campo requerido
+                  </p>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Short Description</span>
+                </div>
+                <textarea class="form-control" formControlName="descriptionShort"></textarea>
+              </div>
+              
+              <div class="alert alert-danger" *ngIf="descriptionShortField.errors && descriptionShortField.touched">
+                  <p class="m-4" *ngIf="descriptionShortField.hasError('required')">
+                    Es un campo requerido
+                  </p>
+                  <p class="m-4" *ngIf="descriptionShortField.hasError('minlength')">
+                      Te falta, minimo deben haber 15 caracteres.
+                    </p>
+                  <p class="m-4" *ngIf="descriptionShortField.hasError('maxlength')">
+                    Te pasaste, máximo deben haber 450 caracteres.
+                  </p>
+             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Paragraph 1</span>
+                </div>
+                <textarea class="form-control" formControlName="descriptionP1"></textarea>
+              </div>
+              
+              <div class="alert alert-danger" *ngIf="descriptionP1Field.errors && descriptionP1Field.touched">
+                  <p class="m-4" *ngIf="descriptionP1Field.hasError('required')">
+                    Es un campo requerido
+                  </p>
+                  <p class="m-4" *ngIf="descriptionP1Field.hasError('minlength')">
+                      Te falta, minimo deben haber 15 caracteres.
+                    </p>
+                  <p class="m-4" *ngIf="descriptionP1Field.hasError('maxlength')">
+                    Te pasaste, máximo deben haber 600 caracteres.
+                  </p>
+             </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Paragraph 2</span>
+                </div>
+                <textarea class="form-control" formControlName="descriptionP2"></textarea>
+              </div>
+              
+              <div class="alert alert-danger" *ngIf="descriptionP2Field.errors && descriptionP2Field.touched">
+                  <p class="m-4" *ngIf="descriptionP2Field.hasError('required')">
+                    Es un campo requerido
+                  </p>
+                  <p class="m-4" *ngIf="descriptionP2Field.hasError('minlength')">
+                      Te falta, minimo deben haber 15 caracteres.
+                    </p>
+                  <p class="m-4" *ngIf="descriptionP2Field.hasError('maxlength')">
+                    Te pasaste, máximo deben haber 600 caracteres.
+                  </p>
+             </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Paragraph 3</span>
+                </div>
+                <textarea class="form-control" formControlName="descriptionP3"></textarea>
+              </div>
+              
+              <div class="alert alert-danger" *ngIf="descriptionP3Field.errors && descriptionP3Field.touched">
+
+                  <p class="m-4" *ngIf="descriptionP3Field.hasError('maxlength')">
+                    Te pasaste, máximo deben haber 600 caracteres.
+                  </p>
+             </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Paragraph 4</span>
+                </div>
+                <textarea class="form-control" formControlName="descriptionP4"></textarea>
+              </div>
+              
+              <div class="alert alert-danger" *ngIf="descriptionP4Field.errors && descriptionP4Field.touched">
+                  <p class="m-4" *ngIf="descriptionP4Field.hasError('maxlength')">
+                    Te pasaste, máximo deben haber 600 caracteres.
+                  </p>
+             </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary btn-block mt-5" >Guardar</button> 
+</form>

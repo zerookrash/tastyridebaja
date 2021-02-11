@@ -1,0 +1,35 @@
+<section id="tours" class="mt-5 tours">
+    <div *ngIf="tours.length === 0">
+        <div class="spinner-border spinner" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>    
+        <p>There is no data to show</p>      
+    </div>
+    <div class="container" *ngFor="let tour of tours">
+        <div class="card card-configur">
+            <div class="card-body">
+                <div class="row h-100">
+                    <div class="col-12 col-md-6">
+                        <img [src]="tour.img" class="mr-auto" alt="{{tour.title}}">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <section class="my-auto">
+                            <div class="row m-1">
+                                <h3>{{tour.title}}</h3>
+                                <p> {{tour.descriptionShort}} </p>
+                                <h2 class="col-auto ml-auto m-2">Price</h2>
+                            </div>
+                            <div class="row">
+                                <h3 class="col-auto ml-auto m-2">${{tour.price}} <small>USD</small> </h3>
+                            </div>
+                            <div class="row">
+                                <button routerLink="/detalle/{{tour.id}}" class="btn btn-light btn-personal ml-auto m-2">Detalles</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+</section>
+    

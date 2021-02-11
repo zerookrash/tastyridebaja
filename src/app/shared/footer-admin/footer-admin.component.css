@@ -1,0 +1,23 @@
+footer {
+    background-color:  #EDC500;
+    padding: 25px;
+}
+
+footer .copy,
+footer .copy a  {
+    text-align: center;
+     color: #531E12;
+}
+
+@media only screen and ( max-width: 600px ) {
+    footer {
+        font-size: 15px;
+    }
+}
+
+@media only screen and ( max-width: 360px ) {
+    footer {
+        font-size: 10px;
+    }
+}
+

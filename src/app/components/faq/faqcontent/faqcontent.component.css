@@ -1,0 +1,22 @@
+/* Spinner */
+
+.tours {
+    text-align: center;
+}
+
+
+.spinner {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: inline-block;
+}
+
+/* Cards */
+
+.perso {
+    color: #e63023;
+}
+
+.pers {
+    color: #652015;
+}

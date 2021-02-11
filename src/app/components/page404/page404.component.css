@@ -1,0 +1,40 @@
+.section {
+    margin: 0;
+    font-size: 26px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    background-image: radial-gradient(circle, #cfcfcf, #bcd9bc, #aba3a8, #9c8e91, #8c7979);
+}
+
+.text-3d {
+    text-transform: uppercase;
+    font-size: 130px;
+    color: #eeeeee;
+
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    text-shadow: 
+                0 1px 0 rgb(190, 190, 190),
+                0 2px 0 rgb(185, 185, 185),
+                0 3px 0 rgb(180, 180, 180),
+                0 4px 0 rgb(175, 175, 175),
+                0 5px 0 rgb(170, 170, 170),
+                0 6px 0 rgb(165, 165, 165),
+                0 7px 0 rgb(160, 160, 160),
+                
+                0 1px 5px rgba(0, 0, 0, 0.05),
+                0 3px 5px rgba(0, 0, 0, 0.10),
+                0 5px 10px rgba(0, 0, 0, 0.15),
+                0 7px 10px rgba(0, 0, 0, 0.20),
+                0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.home {
+    text-transform: uppercase;
+    font-size: 30px;
+
+    position: absolute;
+    top: 60%;
+    left: 39%;
+}

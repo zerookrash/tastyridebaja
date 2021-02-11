@@ -1,0 +1,22 @@
+<section id="tours" class="mt-5 tours">
+    <div *ngIf="faqs.length === 0">
+        <div class="spinner-border spinner" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>          
+          <p>There is no data to show</p>
+    </div>
+    <div class="container mt-5">
+        <div class="accordion" id="accordionExample">
+            <div class="card" *ngFor="let faq of faqs">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0 perso">
+                    {{faq.pregunta}}
+                </h2>
+              </div>
+              <div class="card-body text-justify pers">
+                {{faq.respuesta}}
+              </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+.formContainer {
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    padding: 16px;
+    margin: 10px auto;
+    background: #ffffff;
+}
+
+.formContainer h2 {
+    background-color: #e63023;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    margin: -16px -16px 16px -16px;
+}
+
+.formContainer input {
+    transition: all 0,30 ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555555;
+    font: 95% Arial, Helvetica, sans-serif;
+    /* border-radius: 15px; */
+}
+
+.formContainer .btn-send {
+    box-sizing: border-box;
+    background-color: #e63023;
+    color: #ffffff;
+}
+
+.formContainer .btn-send:hover {
+    background-color: #f03c2f;
+}

@@ -1,0 +1,44 @@
+.form-container {
+
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    padding: 16px;
+    margin: 10px auto;
+    background: #f7f7f7;
+    border-radius: 15px;
+    border: 1px solid #e63023;
+}
+
+.form-container h3 {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: #e63023;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    margin: -16px -16px 16px -16px;
+}
+
+.form-container input {
+    transition: all 0, 30% ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    background: #ffffff;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding: 5%;
+    color: #555555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+
+.form-container .btn-send {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #e63023;
+    color: #ffffff;
+    font-size: 15px;
+}

@@ -1,0 +1,35 @@
+footer {
+    background-color: #EDC500;
+    background-image: url(../../../assets/img/footer/footerfondo.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding: 25px;
+}
+
+footer h2 {
+    color: #C64829;
+}
+
+footer p, i  {
+    color: #531E12;
+    padding: 5px;
+    text-align: justify;
+}
+
+footer .section a,
+footer .copy a  {
+    color: #531E12;
+}
+
+footer .copy,
+footer .col-center,
+footer .col-center p {
+    text-align: center;
+    color: #531E12;
+}
+
+@media only screen and ( max-width: 850px ) {
+    footer {
+        background-image: url(../../../assets/img/footer/2.png);
+    }
+}

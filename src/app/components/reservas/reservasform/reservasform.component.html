@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="col-12">
+        <div class="card formContainer">
+            <h2>Make your reservation with us.</h2>
+
+            <form [formGroup]="reservasForm" (ngSubmit)="onSaveForm()">
+                <input type="text" formControlName="peopel" placeholder="Number of people">
+                
+
+
+                <input type="text" formControlName="cardholder" placeholder="Cardholder name">
+
+                
+
+                <input type="email" formControlName="email" placeholder="Email">
+
+              
+
+
+                <input type="text" formControlName="phone" placeholder="Phone">
+
+
+
+                <input type="text" formControlName="staying" placeholder="Where will you be staying?">
+
+
+
+                <button type="submit" class="btn btn-block btn-send">Reserve</button>
+            </form>
+            
+        </div>
+    </div>
+</div>

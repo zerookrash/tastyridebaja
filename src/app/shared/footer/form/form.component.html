@@ -1,0 +1,53 @@
+<!-- Formulario -->
+    <div class="form-container">
+        <h2>Contact us!</h2>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSaveForm()">
+            <!-- Nombre -->
+            <input type="text" formControlName="name" placeholder="Your Name">
+            
+            <div class="alert alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+                <div class="container-error-message" *ngIf="name.errors.required">
+                    <p>Name is required</p>
+                </div>
+                <div class="container-error-message" *ngIf="name.errors.minlength">
+                    <p>Name must be at least 5 characters long.</p>
+                </div>
+            </div>
+            <!-- Nombre -->
+            <!-- Email -->
+            <input type="text" formControlName="email" placeholder="Your Email">
+
+            <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+                <div class="container-error-message" *ngIf="email.errors.required">
+                    <p>Email is required</p>
+                </div>
+                <div class="container-error-message" *ngIf="email.errors.minlength">
+                    <p>Email must be at least 5 characters long.</p>
+                </div>
+                <div class="container-error-message" *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.pattern">
+                    <p>Email has to be a valid email address..</p>
+                </div>
+            </div>
+            <!-- Email -->
+            <!-- Message -->
+            <textarea formControlName="message" placeholder="Type your message"></textarea>
+
+            <div class="alert alert-danger" *ngIf="message.invalid && (message.dirty || message.touched)">
+                <div class="container-error-message" *ngIf="message.errors.required">
+                    <p>Message is required</p>
+                </div>
+                <div class="container-error-message" *ngIf="message.errors.minlength">
+                    <p>Message must be at least 10 characters long.</p>
+                </div>
+                <div class="container-error-message" *ngIf="message.errors.maxlength">
+                    <p>The message is very long.</p>
+                </div>
+            </div>
+            <!-- Message -->
+
+            <button type="submit" class="btn-send" [disabled]="contactForm.invalid">Send</button>
+        </form>
+
+    </div>
+<!-- /Formulario -->

@@ -1,0 +1,60 @@
+video {
+    width: 100%;
+}
+
+.principal {
+    margin-top: 2rem;
+}
+
+.card img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.card .text1,
+.card .text {
+    text-align: justify;
+    width: 100%;
+}
+
+.card .text1 {
+    margin-top: 13%;
+}
+
+app-pricing {
+    margin: 30px;
+}
+
+.card-wats {
+    border: 0px solid white;
+    margin-bottom: 30px;
+    padding: 2rem;
+}
+
+.card-wats h2 {
+    text-align: center;
+    color: #e63023;
+}
+
+.card-wats p {
+    text-align: center;
+    font-size: 20px;
+    color: #652015;
+}
+
+.card-wats .botones .der {
+    float: right;
+}
+
+.btn-personal {
+    margin: 0;
+}
+
+.card-wats .botones .btn-personal {
+    background-color: #e63023;
+    color: white;
+}
+
+strong {
+    color: #652015;
+}

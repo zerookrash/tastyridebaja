@@ -1,0 +1,111 @@
+<h2 class="title">Pricing</h2>
+<section class="m-5">
+
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <!-- Pricing 1 -->
+            <div class="form-container">
+                <h3>
+                    {{this.pricing.pricing1.title}}
+                </h3>
+               
+                    <form #pricingForm1="ngForm" (submit)="onUpdatePricing1(pricingForm1)">
+                        <!-- ID -->
+                        <input class="d-none" type="text" name="id" id="id" placeholder="ID" [(ngModel)]="this.pricing.pricing1.id">
+                        <!-- /ID -->
+                        <!-- Title -->
+                            <input type="text" name="title" id="title" placeholder="Title" [(ngModel)]="this.pricing.pricing1.title">
+                        <!-- /Title -->
+                        <!-- Price -->
+                            <input type="text" name="price" id="price" placeholder="Price" [(ngModel)]="this.pricing.pricing1.price">
+                        <!-- /Price -->
+                        <!-- Characteristic -->
+                            <input type="text" name="characteristic1" id="characteristic1" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing1.characteristic1">
+                            <input type="text" name="characteristic2" id="characteristic2" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing1.characteristic2">
+                            <input type="text" name="characteristic3" id="characteristic3" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing1.characteristic3">
+                            <input type="text" name="characteristic4" id="characteristic4" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing1.characteristic4">
+                            <input type="text" name="characteristic5" id="characteristic5" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing1.characteristic5">
+                            <input type="text" name="characteristic6" id="characteristic6" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing1.characteristic6">
+                            <input type="text" name="characteristic7" id="characteristic7" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing1.characteristic7">
+                            <input type="text" name="characteristic8" id="characteristic8" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing1.characteristic8">
+                        <!-- /Characteristic -->
+                        
+                        <!-- BTN -->
+                        <button type="submit" class="btn-send">Update Offer</button>
+                    </form>
+                
+            </div>
+            <!-- /Pricing 1 -->
+        </div>
+        <div class="col-12 col-md-4">
+            <!-- Pricing 2 -->
+            <div class="form-container">
+                <h3>
+                    {{this.pricing.pricing2.title}}
+                </h3>
+               
+                    <form #pricingForm2="ngForm" (submit)="onUpdatePricing2(pricingForm2)">
+                        <!-- ID -->
+                            <input class="d-none" type="text" name="id" id="id" placeholder="ID" [(ngModel)]="this.pricing.pricing2.id">
+                        <!-- /ID -->
+                        <!-- Title -->
+                            <input type="text" name="title" id="title" placeholder="Title" [(ngModel)]="this.pricing.pricing2.title">
+                        <!-- /Title -->
+                        <!-- Price -->
+                            <input type="text" name="price" id="price" placeholder="Price" [(ngModel)]="this.pricing.pricing2.price">
+                        <!-- /Price -->
+                        <!-- Characteristic -->
+                            <input type="text" name="characteristic1" id="characteristic1" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing2.characteristic1">
+                            <input type="text" name="characteristic2" id="characteristic2" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing2.characteristic2">
+                            <input type="text" name="characteristic3" id="characteristic3" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing2.characteristic3">
+                            <input type="text" name="characteristic4" id="characteristic4" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing2.characteristic4">
+                            <input type="text" name="characteristic5" id="characteristic5" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing2.characteristic5">
+                            <input type="text" name="characteristic6" id="characteristic6" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing2.characteristic6">
+                            <input type="text" name="characteristic7" id="characteristic7" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing2.characteristic7">
+                            <input type="text" name="characteristic8" id="characteristic8" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing2.characteristic8">
+                        <!-- /Characteristic -->
+                        
+                        <!-- BTN -->
+                        <button type="submit" class="btn-send">Update Offer</button>
+                    </form>
+                
+            </div>
+            <!-- /Pricing 2 -->
+        </div>
+        <div class="col-12 col-md-4">
+            <!-- Pricing 3 -->
+            <div class="form-container">
+                <h3>
+                   {{this.pricing.pricing3.title}}
+                </h3>
+               
+                    <form #pricingForm3="ngForm" (submit)="onUpdatePricing3(pricingForm3)">
+                        <!-- ID -->
+                            <input class="d-none" type="text" name="id" id="id" placeholder="ID" [(ngModel)]="this.pricing.pricing3.id">
+                        <!-- /ID -->
+                        <!-- Title -->
+                            <input type="text" name="title" id="title" placeholder="Title" [(ngModel)]="this.pricing.pricing3.title">
+                        <!-- /Title -->
+                        <!-- Price -->
+                            <input type="text" name="price" id="price" placeholder="Price" [(ngModel)]="this.pricing.pricing3.price">
+                        <!-- /Price -->
+                        <!-- Characteristic -->
+                            <input type="text" name="characteristic1" id="characteristic1" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing3.characteristic1">
+                            <input type="text" name="characteristic2" id="characteristic2" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing3.characteristic2">
+                            <input type="text" name="characteristic3" id="characteristic3" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing3.characteristic3">
+                            <input type="text" name="characteristic4" id="characteristic4" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing3.characteristic4">
+                            <input type="text" name="characteristic5" id="characteristic5" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing3.characteristic5">
+                            <input type="text" name="characteristic6" id="characteristic6" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing3.characteristic6">
+                            <input type="text" name="characteristic7" id="characteristic7" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing3.characteristic7">
+                            <input type="text" name="characteristic8" id="characteristic8" placeholder="Characteristic" [(ngModel)]="this.pricing.pricing3.characteristic8">
+                        <!-- /Characteristic -->
+                        
+                        <!-- BTN -->
+                        <button type="submit" class="btn-send">Update Offer</button>
+                    </form>
+                
+            </div>
+            <!-- /Pricing 3 -->
+        </div>
+    </div>
+</section>

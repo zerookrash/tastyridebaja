@@ -1,0 +1,31 @@
+<section id="tours m-3">
+    <h2 class="title">Tours</h2>
+    <div *ngIf="msns.length === 0" class="tours">
+        <div class="spinner-border spinner" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>  
+        <p>There is no data to show</p>        
+    </div>
+    <table class="table table-hover table-responsive mb-5">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Message</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center" *ngFor="let msn of msns; index as i">
+                <td scope="row"> <strong>{{i + 1}}</strong> </td>
+                <td class="name"> <strong class="name">{{msn.name}}</strong> </td>
+                <td> <a href="mailto:{{msn.email}}">{{msn.email}}</a></td>
+                <td class="text-justify">{{msn.message}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-block" (click)="onDeleteMsn(msn.id)" >Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

@@ -1,0 +1,22 @@
+.img-principla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-principla img {
+    line-height: normal;
+}
+
+form {
+    margin-bottom: 5%;
+}
+
+textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.input-group {
+    margin: 5px;
+}

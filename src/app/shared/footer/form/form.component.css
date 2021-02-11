@@ -1,0 +1,51 @@
+.form-container {
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    padding: 16px;
+    margin: 10px auto;
+    background: #f7f7f7;
+    border-radius: 15px;
+}
+
+.form-container h2 {
+    background: #e63023;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    margin: -16px -16px 16px -16px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    transition: all 0, 30% ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    background: #ffffff;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding: 5%;
+    color: #555555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+
+.form-container textarea{
+    resize: none;
+    padding: 3%;
+}
+
+.form-container .btn-send {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #e63023;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.form-container .btn-send:hover:not([disabled]) {
+    background: #ed1202;
+}

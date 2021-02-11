@@ -1,0 +1,12 @@
+form {
+    margin-bottom: 5%;
+}
+
+textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.input-group {
+    margin: 5px;
+}
