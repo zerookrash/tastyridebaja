@@ -1,9 +1,12 @@
-<table class="table">
+<table class="table table-striped table-hover table-borderless">
     <thead>
         <tr class="text-center">
             <th scope="col">#</th>
-            <th scope="col">Number of people</th>
-            <th scope="col">Cardholder name</th>
+            <th scope="col">Reservation Name</th>
+            <th scope="col">Tour</th>
+            <th scope="col">Date</th>
+            <th scope="col">PickUp</th>
+            <th scope="col">Transport</th>
             <th scope="col">Email</th>
             <th scope="col">Phone number</th>
             <th scope="col">Where will you be staying?</th>
@@ -12,11 +15,13 @@
     <tbody>
         <tr class="text-center" *ngFor="let reservation of reservations; index as i">
             <td scope="row"> <strong>{{i + 1}}</strong> </td>
-            <td> <strong>{{reservation.peopel}}</strong> </td>
-            <td>{{reservation.cardholder}}</td>
+            <td> <strong>{{reservation.name}}</strong> </td>
+            <td>{{reservation.title}}</td>
+            <td>{{reservation.date | date: 'MMM d, y'}}</td>
+            <td>{{reservation.pickUp}}</td>
+            <td>{{reservation.transport}}</td>
             <td>{{reservation.email}}</td>
             <td>{{reservation.phone}}</td>
-            <td>{{reservation.staying}}</td>
             <td>
                 <button type="button" class="btn btn-danger btn-block" (click)='onDeleteReservation(reservation.id)'>Delete</button>
             </td>

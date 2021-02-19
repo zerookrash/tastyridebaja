@@ -7,14 +7,24 @@
     text-align: justify;
 }
 
+.card p img {
+    border-radius: 10px;
+    width: 100%;
+}
+
 .card .price {
     float: right;
     font-size: 2.5rem;
     color: green;
 }
 
+.card .price small {
+    font-size: .8rem;
+    color: #000;
+}
+
 .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #e63023;
 }
 
@@ -40,4 +50,32 @@ hr {
     margin-top: 10rem;
     margin-bottom: 10rem;
     display: inline-block;
+}
+
+/* Formulario */
+
+.card .form-container {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.card .form-container .form {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    padding: 12px;
+    margin: 0 auto;
+
+    background-color: rgba(255, 193, 7, 0.5);
+}
+
+.card .form-container .form input[type="text"],
+.card .form-container .form input[type="email"],
+.card .form-container .form input[type="date"],
+.card .form-container .form select {
+    width: 100%;
+    height: 2.3rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }

@@ -11,30 +11,60 @@
                     <div class="card">
                         <div class="card-body text-center">
                             <p>
-                                <img src="{{tour.img}}" alt=" {{tour.title}} " class="img-fluid">
+                                <img src="{{tour.img}}" alt=" {{tour.title}} " class="img-fluid d-none d-md-block">
                             </p>
-                            <div class="card-title title"> {{tour.title}} </div>
-                            <hr>
-                            <div class="card-text">
-                                <p>
-                                    {{tour.descriptionP1}}
-                                </p>
-                                <p>
-                                    {{tour.descriptionP2}}
-                                </p>
-                                <p>
-                                    {{tour.descriptionP3}}
-                                </p>
-                                <p>
-                                    {{tour.descriptionP4}}
-                                </p>
-                                <p class="price ml-auto">
-                                    $<strong>{{tour.price}} </strong> <small>USD</small> 
-                                </p>
-                            </div>
-                            <div class="card-text">
-                                <a routerLink="/theride" class="btn btn-personal mr-2">Return Tours</a>
-                                <a routerLink="/reservas" class="btn btn-info">Reserve</a>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-8">
+                                    <div class="card-title title"> {{tour.title}} </div>
+                                    <hr>
+                                    <div class="card-text">
+                                        <p>
+                                            {{tour.descriptionP1}}
+                                        </p>
+                                        <p>
+                                            {{tour.descriptionP2}}
+                                        </p>
+                                        <p>
+                                            {{tour.descriptionP3}}
+                                        </p>
+                                        <p>
+                                            {{tour.descriptionP4}}
+                                        </p>
+                                        <div class="price ml-auto">
+                                            $<strong>{{tour.price}} </strong> <small>USD /*Per Person </small>
+                                        </div>   
+                                    </div>
+                                    <div class="card-text">
+                                        <a routerLink="/theride" class="btn btn-personal">Return Tours</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-3 form-container">
+                                    <form [formGroup]="reservasForm" (ngSubmit)="onSaveForm()" class="form">
+                                        <h2 class="title">Reserve</h2>
+                                        <hr>
+                                        <input formControlName="name" type="text" class="formInput" placeholder="Full Name">
+                                        <input formControlName="adult" type="text" class="formInput" placeholder="Number of Adults">
+                                        <small class="mt-0" style="font-size: 10px;">- 1 of 11 years old -</small>
+                                        <input formControlName="childrens" type="text" class="formInput" placeholder="Number of Childrens">
+                                        <input formControlName="email" type="email" class="formInput" placeholder="Email">
+                                        <input formControlName="phone" type="text" class="formInput" placeholder="Phone Number">
+                                        <input formControlName="date" type="date" class="formInput">
+                                        <select formControlName="pickUp" id="pickUp">
+                                            <option value="" selected>Select One Location</option>
+                                            <option value="San José del Cabo">San José del Cabo</option>
+                                            <option value="Cabo San Lucas">Cabo San Lucas</option>
+                                            <option value="Puerto Los Cabos">Puerto Los Cabos</option>
+                                        </select>
+                                        <select formControlName="transport" id="transport">
+                                            <option value="" selected>Select One Transpotation</option>
+                                            <option value="VIP (Private)">VIP (Private)</option>
+                                            <option value="Regular (Private)">Regular (Private)</option>
+                                            <option disabled value="Regular (Shuttle)">Regular (Shuttle)</option>
+                                        </select>
+
+                                        <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
