@@ -14,6 +14,13 @@ import Swal from 'sweetalert2';
 
 import { AltasI } from '../../../models/altas.interface';
 
+import { 
+  Router,
+  NavigationEnd
+} from '@angular/router';
+
+declare var ga: Function;
+
 @Component({
   selector: 'app-detalle-tour-component',
   templateUrl: './detalle-tour-component.component.html',
@@ -24,10 +31,18 @@ export class DetalleTourComponentComponent implements OnInit {
   constructor(
     private dataApi: DataApiService,
     private router: ActivatedRoute,
-    private dbData: DataApiService 
+    private dbData: DataApiService,
+    private route: Router
   ) { 
     window.scroll(0, 0);
     this.reservasForm = this.createFormGroup();
+
+    this.route.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+          ga('set', 'page', event.urlAfterRedirects);
+          ga('send', 'pageview');
+      }
+    });
   }
 
   public tour: AltasI;
