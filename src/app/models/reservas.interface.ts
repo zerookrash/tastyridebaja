@@ -5,4 +5,6 @@ export interface ReservaI {
     email: string;
     phone: string;
     staying: string;
+    name: string;
+    status: string;
 }

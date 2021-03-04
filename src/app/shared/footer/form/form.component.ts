@@ -6,6 +6,8 @@ import {
   Validators
 } from '@angular/forms';
 
+declare var ga: Function;
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -38,6 +40,7 @@ export class FormComponent implements OnInit {
 
   onSaveForm() {
     if(this.contactForm.valid){
+      ga('send', 'event', 'Contact Form', 'Contacto Realizado');
       this.dbData.saveMessage(this.contactForm.value);
       this.onResetForm();
       console.log('Valid');

@@ -113,6 +113,23 @@ deleteReserv( idTour: ReservaI ): void {
   this.reservaDoc.delete();
 }
 
+updateReservaPending(res): void {
+  res.status = 'Pending';
+  this.reservaDoc = this.afs.doc<ReservaI>(`reservas/${res.id}`);
+  this.reservaDoc.update(res);
+}
+
+updateReservaConfirm(res): void {
+  res.status = 'Confirm';
+  this.reservaDoc = this.afs.doc<ReservaI>(`reservas/${res.id}`);
+  this.reservaDoc.update(res);
+}
+
+updateReservaCancelled(res): void {
+  res.status = 'Cancelled';
+  this.reservaDoc = this.afs.doc<ReservaI>(`reservas/${res.id}`);
+  this.reservaDoc.update(res);
+}
 
 
 }

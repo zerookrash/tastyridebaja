@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-3 form-container">
-                                    <form [formGroup]="reservasForm" (ngSubmit)="onSaveForm()" class="form">
+                                    <form [formGroup]="reservasForm" id="reservasForm" (ngSubmit)="onSaveForm()" class="form">
                                         <h2 class="title">Reserve</h2>
                                         <hr>
                                         <input formControlName="name" type="text" class="formInput" placeholder="Full Name">
@@ -62,7 +62,7 @@
                                             <option disabled value="Regular (Shuttle)">Regular (Shuttle)</option>
                                         </select>
 
-                                        <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+                                        <button type="submit" class="btn btn-primary btn-block" >Book Now</button>
                                     </form>
                                 </div>
                             </div>

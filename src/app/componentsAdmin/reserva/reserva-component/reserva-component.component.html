@@ -23,7 +23,28 @@
             <td>{{reservation.email}}</td>
             <td>{{reservation.phone}}</td>
             <td>
-                <button type="button" class="btn btn-danger btn-block" (click)='onDeleteReservation(reservation.id)'>Delete</button>
+                <div class="row">
+                    <div class="col mt-2">
+                        <button type="button" class="btn btn-danger btn-block" (click)='onDeleteReservation(reservation.id)'>Delete</button>
+                    </div>
+                </div>
+                <div class="row">
+                
+                    <div class="col mt-2">
+                        <button *ngIf="reservation.status != 'Pending'" (click)='onPendingReservation(reservation)'  type="button" class="btn btn-outline-warning btn-block"> Pending </button>
+                        <button *ngIf="reservation.status == 'Pending'" type="button" class="btn btn-warning btn-block disabled"> Pending </button>
+                    </div>
+                    
+                    <div class="col mt-2">
+                        <button *ngIf="reservation.status != 'Confirm'"  (click)='onConfirmReservation(reservation)' type="button" class="btn btn-outline-success btn-block">Confimr</button>
+                        <button *ngIf="reservation.status == 'Confirm'" type="button" class="btn btn-success btn-block disabled">Confimr</button>
+                    </div>
+
+                    <div class="col mt-2" >
+                        <button *ngIf="reservation.status != 'Cancelled'" (click)='onCancelledReservation(reservation)'  type="button" class="btn btn-outline-danger btn-block">Cancel</button>
+                        <button *ngIf="reservation.status == 'Cancelled'" type="button" class="btn btn-danger btn-block disabled">Cancel</button>
+                    </div>
+                </div>
             </td>
         </tr>
     </tbody>

@@ -23,7 +23,11 @@
                                 <h3 class="col-auto ml-auto m-2">${{tour.price}} <small>USD</small> </h3>
                             </div>
                             <div class="row">
-                                <button routerLink="/detalle/{{tour.id}}" class="btn btn-light btn-personal ml-auto m-2">Detalles</button>
+                                <button routerLink="/detalle/{{tour.id}}"
+                                        type="button"
+                                        (click)="getAnalytics(tour.title)" 
+                                        class="btn btn-light btn-personal ml-auto m-2"
+                                >Detalles</button>
                             </div>
                         </section>
                     </div>

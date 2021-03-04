@@ -59,7 +59,8 @@ export class DetalleTourComponentComponent implements OnInit {
       phone: new FormControl('', [Validators.required, Validators.minLength(10)]),
       date: new FormControl('', [Validators.required]),
       pickUp: new FormControl('', [Validators.required]),
-      transport: new FormControl('', [Validators.required])
+      transport: new FormControl('', [Validators.required]),
+      status: new FormControl('Pending')
     })
   }
 
@@ -79,8 +80,13 @@ export class DetalleTourComponentComponent implements OnInit {
   }
 
   onSaveForm() {
-    console.log(this.reservasForm.value);
+    // console.log(this.reservasForm.value);
     if (this.reservasForm.valid) {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Book',
+        eventAction: this.tour.title
+      });
       this.reservasForm.value.title = this.tour.title;
       this.dbData.saveReservas(this.reservasForm.value);
       // Sweet Alert
@@ -102,5 +108,6 @@ export class DetalleTourComponentComponent implements OnInit {
       })
     }
   }
+
 
 }
